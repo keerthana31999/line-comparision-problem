@@ -21,7 +21,31 @@ public class LineComparisonProblem {
                 System.out.println("Enter y2 value: ");
                 int y2 = input4.nextInt();
 
-		double length = Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2));
-		System.out.println(length);
+		Scanner input5 = new Scanner(System.in);
+                System.out.println("Enter x3 value: ");
+                int x3 = input5.nextInt();
+
+                Scanner input6 = new Scanner(System.in);
+                System.out.println("Enter y3 value: ");
+                int y3 = input6.nextInt();
+
+                Scanner input7 = new Scanner(System.in);
+                System.out.println("Enter x4 value: ");
+                int x4 = input7.nextInt();
+
+                Scanner input8 = new Scanner(System.in);
+                System.out.println("Enter y4 value: ");
+                int y4 = input8.nextInt();
+
+		double lenOfFirstLine = Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2));
+		System.out.println(lenOfFirstLine);
+
+		double lenOfSecondLine = Math.sqrt(Math.pow((x4 - x3),2) + Math.pow((y4 - y3),2));
+                System.out.println(lenOfSecondLine);
+
+		Double len1 = new Double(lenOfFirstLine);
+		Double len2 = new Double(lenOfSecondLine);
+
+		System.out.println(len1.equals(len2));
 	}
 }
