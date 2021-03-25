@@ -1,40 +1,27 @@
 import java.util.*;
 
-public class LineComparisionProblem {
-
-	static int UserInput(){
-		Scanner input = new Scanner(System.in);
-		int x = input.nextInt();
-		return x;
-	}
-
-	static double Length(int a, int b, int c, int d){
-		double lenOfLine = Math.sqrt(Math.pow((c - a),2) + Math.pow((d - b),2));
-		return lenOfLine;
-	}
+public class LineComparisonProblem {
 
 	public static void main(String[] args){
 		System.out.println("Welcome to Line Comparison Computation");
 
-		int x1 = UserInput();
-		int x2 = UserInput();
-		int x3 = UserInput();
-		int x4 = UserInput();
-		int y1 = UserInput();
-		int y2 = UserInput();
-		int y3 = UserInput();
-		int y4 = UserInput();
+		Scanner input1 = new Scanner(System.in);
+		System.out.println("Enter x1 value: ");
+		int x1 = input1.nextInt();
 
-		double lenOfLine1 = Length(x1, y1, x2, y2);
-		double lenOfLine2 = Length(x3, y3, x4, y4);
+		Scanner input2 = new Scanner(System.in);
+		System.out.println("Enter y1 value: ");
+		int y1 = input2.nextInt();
 
-		System.out.println("length of First Line: " + lenOfLine1 );
+		Scanner input3 = new Scanner(System.in);
+                System.out.println("Enter x2 value: ");
+                int x2 = input3.nextInt();
 
-		System.out.println("length of Second Line: " + lenOfLine2 );
+                Scanner input4 = new Scanner(System.in);
+                System.out.println("Enter y2 value: ");
+                int y2 = input4.nextInt();
 
-		Double len1 = new Double(lenOfLine1);
-		Double len2 = new Double(lenOfLine2);
-		System.out.println(len1.equals(len2));
-		System.out.println(len1.compareTo(len2));
+		double length = Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2));
+		System.out.println(length);
 	}
 }
